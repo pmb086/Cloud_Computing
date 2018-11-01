@@ -1,0 +1,13 @@
+<html>
+<title> Search Results</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<body>
+<center> Search Results</center><br><br>
+<h2>There were {{ count }} earthquakes near 20 km - 50 km range of this location</h2>
+<br><br><br><br><br>
+<center>
+{% for result in data %}
+	{{  result  }}<br>
+{% endfor %}
+</center>
+</body>

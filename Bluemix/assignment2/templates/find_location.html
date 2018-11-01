@@ -1,0 +1,15 @@
+<html>
+<title> Find Location</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   <body>
+   <h1>Find Locations</h1>
+   <br> <br> <br> <br> <br> <br>
+      <center><form method="POST" action="{{ url_for('find_loc_success') }}" enctype=multipart/form-data >
+         Input parameters: <br>
+		 Latitude: <input type = "number" step="any" name = "lat" /><br>
+         Longitude: <input type = "number" step="any" name = "long" />
+		 <input type = "submit" name = "Search"/>
+      </form></center>
+      
+   </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<title> Search Results</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<body>
+<center> Search Results</center><br><br>
+<center><h2>There were {{ count1 }} earthquakes below 20 km range of this location</h2>
+<br><br><br><br><br>
+{% for result1 in data1 %}
+	{{  result1  }}<br>
+{% endfor %}
+<br><br>
+<h2>There were {{ count2 }} earthquakes between 20 km - 50 km range of this location</h2>
+<br><br><br><br><br>
+<center>
+{% for result2 in data2 %}
+	{{  result2  }}<br>
+{% endfor %}
+<br><br>
+<h2>There were {{ count3 }} earthquakes above 50 km range of this location</h2>
+<br><br><br><br><br>
+<center>
+{% for result3 in data3 %}
+	{{  result3  }}<br>
+{% endfor %}
+</center>
+</body>

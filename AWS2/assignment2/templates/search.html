@@ -1,0 +1,15 @@
+<html>
+<title> Search Engine</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   <body>
+   <center><h1> Balaji <br>
+10001576836</h1></center>
+   <h1>Search by Magnitude </h1>
+   <br> <br> <br> <br> <br> <br>
+      <center><form method="POST" action="{{ url_for('search_success') }}" enctype=multipart/form-data >
+         Input a magnitude:  <input type = "number" step=0.01 name = "mag" />
+         <input type = "submit" name = "Search"/>
+      </form></center>
+      
+   </body>
+</html>

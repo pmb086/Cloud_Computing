@@ -1,0 +1,16 @@
+<html>
+<title> Search Results</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<body>
+<center> Search Results</center>
+
+<br><br><br><br><br>
+<h1>Centroid positions in the clusters </h1>
+<center>
+{% for kmeans in data %}
+	{{  kmeans  }}<br>
+{% endfor %}
+<br><br><br>
+<img src="static/clusterplot.png">
+</center>
+</body>

@@ -1,0 +1,26 @@
+<html>
+<title> How often earthquakes occur at night?</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<body>
+<center> Search Results</center>
+<br><br>
+No. of rows :   {{ count }}
+<br><br><br><br><br>
+<center><h1> Earthquakes that occurred at night</h1><br>
+{% for rows in data %}
+	{{  rows  }}<br>
+{% endfor %}
+</center><br><br><h3>
+No. of rows :   {{ count2 }}
+<br><br>
+<center><h1> Earthquakes that occurred at day</h1><br>
+{% for rows2 in data2 %}
+	{{  rows2  }}<br>
+{% endfor %}</h3>
+{% if count > count2 %}
+	<h2> Large earthquakes occurs often at night</h2>
+{% else %}
+	<h2>  Large earthquakes do not occur often at night</h2>
+{% endif %}
+</center>
+</body>

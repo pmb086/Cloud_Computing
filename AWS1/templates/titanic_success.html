@@ -1,0 +1,97 @@
+<!--https://developers.google.com/chart/interactive/docs/quick_start-->
+
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart1);
+	  
+	  google.charts.setOnLoadCallback(drawChart2);
+	  
+	  google.charts.setOnLoadCallback(drawChart3);
+	  
+	  google.charts.setOnLoadCallback(drawChart4);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart1() {
+
+        // Create the data table.
+        var data1 = new google.visualization.arrayToDataTable({{ data1|safe }}
+        );
+
+        // Set chart options
+        var options1 = {'title':'Male who survived',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart1 = new google.visualization.PieChart(document.getElementById('peoplepie1'));
+        chart1.draw(data1 , options1);
+      }
+	  
+	  function drawChart2() {
+
+        // Create the data table.
+        var data2 = new google.visualization.arrayToDataTable({{ data2|safe }}
+        );
+
+        // Set chart options
+        var options2 = {'title':'Female who survived',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart2 = new google.visualization.PieChart(document.getElementById('peoplepie2'));
+        chart2.draw(data2 , options2);
+      }
+	  
+	  function drawChart3() {
+
+        // Create the data table.
+        var data3 = new google.visualization.arrayToDataTable({{ data3|safe }}
+        );
+
+        // Set chart options
+        var options3 = {'title':'Male who didn\'t survive',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart3 = new google.visualization.PieChart(document.getElementById('peoplepie3'));
+        chart3.draw(data3 , options3);
+      }
+	  
+	  function drawChart4() {
+
+        // Create the data table.
+        var data4 = new google.visualization.arrayToDataTable({{ data4|safe }}
+        );
+
+        // Set chart options
+        var options4 = {'title':'Female who didn\'t survive',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart4 = new google.visualization.PieChart(document.getElementById('peoplepie4'));
+        chart4.draw(data4 , options4);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="peoplepie1"></div>
+	<div id="peoplepie2"></div>
+	<div id="peoplepie3"></div>
+	<div id="peoplepie4"></div>
+  </body>
+</html>
